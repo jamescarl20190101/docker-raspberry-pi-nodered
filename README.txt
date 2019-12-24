@@ -22,7 +22,7 @@ docker run -it -p 1880:1880 jamescarl20190101/docker-raspberry-pi-nodered:0.20.5
 
 # Upload to Docker Hub
 docker login
-docker push ernestgwilsonii/docker-raspberry-pi-nodered:0.20.5
+docker push jamescarl20190101/docker-raspberry-pi-nodered:0.20.5
 ###############################################################################
 
 
