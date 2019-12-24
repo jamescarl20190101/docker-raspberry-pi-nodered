@@ -31,6 +31,7 @@ docker push jamescarl20190101/docker-raspberry-pi-nodered:0.20.5
 ####################
 # Create bind mounted directory
 sudo mkdir -p /mnt/nodered
+sudo chmod 777 /mnt/nodered
 
 ##########
 # Deploy #
