@@ -3,7 +3,7 @@ version: '3.4'
 services:
 
   nodered:
-    image: ernestgwilsonii/docker-raspberry-pi-nodered:0.20.5 
+    image: jamescarl20190101/docker-raspberry-pi-nodered:0.20.5 
     hostname: nodered
     ports:
       # NodeRED unencrypted TCP 1880
@@ -15,7 +15,7 @@ services:
       - nodered-net1
     volumes:
       - type: bind
-        source: /opt/node-red
+        source: /mnt/nodered
         target: /data/.node-red
     deploy:
       labels:
