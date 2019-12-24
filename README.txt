@@ -30,7 +30,7 @@ docker push jamescarl20190101/docker-raspberry-pi-nodered:0.20.5
 # First time setup #
 ####################
 # Create bind mounted directory
-sudo mkdir -p /opt/node-red
+sudo mkdir -p /mnt/node-red
 
 ##########
 # Deploy #
