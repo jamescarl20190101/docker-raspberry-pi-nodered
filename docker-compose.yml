@@ -18,6 +18,7 @@ services:
         source: /mnt/nodered
         target: /data/.node-red
     deploy:
+      mode: global
       labels:
         local.description: "NodeRED"
       restart_policy:
