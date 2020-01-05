@@ -19,6 +19,7 @@ services:
         target: /data/.node-red
     deploy:
       mode: global
+#      replica: 2
       labels:
         local.description: "NodeRED"
       restart_policy:
