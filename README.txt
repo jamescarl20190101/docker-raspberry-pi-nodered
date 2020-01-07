@@ -17,6 +17,7 @@ docker images
 
 # Verify 
 docker run -it -p 1880:1880 jamescarl20190101/docker-raspberry-pi-nodered:0.20.5
+docker run --publish 1880:1880 --device="/dev/i2c-1:/dev/i2c-1" --privileged nodered/node-red:1.0.3-10-arm32v7
 # From another ssh session:
 #docker ps
 
