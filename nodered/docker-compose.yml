@@ -19,9 +19,9 @@ services:
       - nodered-net1
     volumes:
       - type: bind
-        source: $HOME/.node-red
+        source: /home/hs/.node-red
 #        source: /mnt/nodered
-        target: /data/.node-red
+        target: /data
     deploy:
       mode: global
       labels:

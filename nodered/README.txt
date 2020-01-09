@@ -46,3 +46,9 @@ docker service logs -f nodered
 
 # http://IPAddress:1880
 ###############################################################################
+# Docker swarm is not providing --device and --priviledge for now
+# so if you want to map host devices, you have to use docker-compose, not swarm
+###############################################################################
+# if you want to use volume as a non root user
+chwon -R 1000:1000 <HOST_PATH>
+docker-compose up -d
