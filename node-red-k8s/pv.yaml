@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-nodered
+  labels:
+    app.kubernetes.io/instance: nodered
+    app.kubernetes.io/name: node-red
+spec:
+  capacity:
+    storage: 2Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/opt/K8SPV/nodered"
