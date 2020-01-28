@@ -22,12 +22,12 @@ services:
         source: /home/hs/.node-red
 #        source: /mnt/nodered
         target: /data
-    deploy:
-      mode: global
-      labels:
-        local.description: "NodeRED"
-      restart_policy:
-        condition: on-failure
+#    deploy:
+#      mode: global
+#      labels:
+#        local.description: "NodeRED"
+#      restart_policy:
+#        condition: on-failure
 
 networks:
   nodered-net1:

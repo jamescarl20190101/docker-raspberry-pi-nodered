@@ -1,0 +1,14 @@
+kind: PersistentVolume
+apiVersion: v1
+metadata:
+  name: pv-nodered-siteserver
+  labels:
+    app.kubernetes.io/instance: nodered
+    app.kubernetes.io/name: node-red
+spec:
+  capacity:
+    storage: 5Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: "/home/hs/.node-red"

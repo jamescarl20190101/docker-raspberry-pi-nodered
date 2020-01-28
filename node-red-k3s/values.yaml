@@ -14,6 +14,9 @@ image:
 nameOverride: ""
 fullnameOverride: ""
 
+livenessProbePath: /
+readinessProbePath: /
+
 flows: "flows.json"
 safeMode: "false"
 enableProjects: "false"
@@ -64,15 +67,15 @@ persistence:
   ##   set, choosing the default provisioner.  (gp2 on AWS, standard on
   ##   GKE, AWS & OpenStack)
   ##
-  # storageClass: "-"
+  storageClass: "-"
   ##
   ## If you want to reuse an existing claim, you can pass the name of the PVC using
   ## the existingClaim variable
   # existingClaim: your-claim
   accessMode: ReadWriteOnce
-  size: 2Gi
+  size: 5Gi
   ## When mounting the data volume you may specify a subPath
-  # subPath: /configs/node-red
+#  subPath: /home/hs/.node-red
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
@@ -86,15 +89,9 @@ resources: {}
   #  cpu: 100m
   #  memory: 128Mi
 
-#nodeSelector: {}
+nodeSelector: {}
 
-#tolerations: []
-#nodeSelector:
-#  roleinrpi: centralserver
-#tolerations:
-#- key: node-role.kubernetes.io/master
-#  operator: Equal
-#  effect: NoSchedule
+tolerations: []
 
 affinity: {}
 
